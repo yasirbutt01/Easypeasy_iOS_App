@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomButtonView" customModule="easypeasy" customModuleProvider="target">
+            <connections>
+                <outlet property="bottomView" destination="ryh-XY-To6" id="NtE-NJ-ehz"/>
+                <outlet property="button" destination="8Pa-e8-Fan" id="65r-mL-vfZ"/>
+                <outlet property="lineIcon" destination="52F-zV-ggx" id="H5h-Hw-s0y"/>
+                <outlet property="mainView" destination="shX-B3-XNR" id="E6G-iR-obh"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ryh-XY-To6">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="shX-B3-XNR" customClass="RoundWithShadowView" customModule="easypeasy" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line_icon" translatesAutoresizingMaskIntoConstraints="NO" id="52F-zV-ggx">
+                                    <rect key="frame" x="20" y="69" width="374" height="1"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="1" id="MqR-ZS-yMY"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="52F-zV-ggx" firstAttribute="leading" secondItem="shX-B3-XNR" secondAttribute="leading" constant="20" id="3PV-rq-pdK"/>
+                                <constraint firstItem="52F-zV-ggx" firstAttribute="centerX" secondItem="shX-B3-XNR" secondAttribute="centerX" id="84v-wZ-yLS"/>
+                                <constraint firstAttribute="trailing" secondItem="52F-zV-ggx" secondAttribute="trailing" constant="20" id="gnK-5n-aov"/>
+                                <constraint firstAttribute="bottom" secondItem="52F-zV-ggx" secondAttribute="bottom" id="sGb-5X-sMa"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="topColor">
+                                    <color key="value" name="green_top"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="bottomColor">
+                                    <color key="value" name="green"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" name="green_bg"/>
+                    <constraints>
+                        <constraint firstItem="shX-B3-XNR" firstAttribute="centerX" secondItem="ryh-XY-To6" secondAttribute="centerX" id="Bov-6m-Xvp"/>
+                        <constraint firstItem="shX-B3-XNR" firstAttribute="top" secondItem="ryh-XY-To6" secondAttribute="top" id="cDU-Oc-BeV"/>
+                        <constraint firstItem="shX-B3-XNR" firstAttribute="leading" secondItem="ryh-XY-To6" secondAttribute="leading" id="hn9-Cu-04a"/>
+                        <constraint firstAttribute="bottom" secondItem="shX-B3-XNR" secondAttribute="bottom" constant="5" id="iln-w0-hW4"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Pa-e8-Fan">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="buttonTapped:" destination="-1" eventType="touchUpInside" id="tr1-5g-pab"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="8Pa-e8-Fan" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="1cz-q0-n1y"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="8Pa-e8-Fan" secondAttribute="bottom" id="2IG-Ah-6Dv"/>
+                <constraint firstItem="ryh-XY-To6" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="EyH-Bi-6aG"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="8Pa-e8-Fan" secondAttribute="trailing" id="Hx9-cq-MdW"/>
+                <constraint firstItem="ryh-XY-To6" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Kj8-Yh-TwI"/>
+                <constraint firstItem="8Pa-e8-Fan" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Urn-p2-1Wb"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="ryh-XY-To6" secondAttribute="bottom" id="anX-eS-pN4"/>
+                <constraint firstAttribute="trailing" secondItem="ryh-XY-To6" secondAttribute="trailing" id="oVP-h6-hgv"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="66.666666666666671" y="192.52232142857142"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="line_icon" width="143" height="1"/>
+        <namedColor name="green">
+            <color red="0.0" green="0.80000001192092896" blue="0.60000002384185791" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="green_bg">
+            <color red="0.0" green="0.6589999794960022" blue="0.49399998784065247" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="green_top">
+            <color red="0.0" green="0.88599997758865356" blue="0.66699999570846558" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
